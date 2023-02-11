@@ -1,0 +1,52 @@
+{
+  "vpc-provider:account=798616169137:filter.vpc-id=vpc-01961b1baea92b32f:region=us-east-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-01961b1baea92b32f",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-01dd6f15d4e3a9893",
+            "cidr": "172.31.80.0/20",
+            "availabilityZone": "us-east-1a",
+            "routeTableId": "rtb-052c96f6fda703997"
+          },
+          {
+            "subnetId": "subnet-0f95316617eabadbb",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-1b",
+            "routeTableId": "rtb-052c96f6fda703997"
+          },
+          {
+            "subnetId": "subnet-07cbbc24c381d71ec",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-1c",
+            "routeTableId": "rtb-052c96f6fda703997"
+          },
+          {
+            "subnetId": "subnet-06336457855137815",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-1d",
+            "routeTableId": "rtb-052c96f6fda703997"
+          },
+          {
+            "subnetId": "subnet-0de45d4760f86215d",
+            "cidr": "172.31.48.0/20",
+            "availabilityZone": "us-east-1e",
+            "routeTableId": "rtb-052c96f6fda703997"
+          },
+          {
+            "subnetId": "subnet-0cf693625b84a5c0d",
+            "cidr": "172.31.64.0/20",
+            "availabilityZone": "us-east-1f",
+            "routeTableId": "rtb-052c96f6fda703997"
+          }
+        ]
+      }
+    ]
+  },
+  "ami:account=798616169137:filters.image-type.0=machine:filters.name.0=Amazon Linux 2 with letsencrypt fix:filters.state.0=available:region=us-east-1": "ami-08f910d0eb015e018"
+}
