@@ -53,3 +53,7 @@ jobs:
       - name: CDK Deploy
         run: cdk deploy --require-approval never
         working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
+        
+      - name: CDK Destroy
+        run: cdk destroy --require-approval never
+        working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
