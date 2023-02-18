@@ -47,7 +47,7 @@ jobs:
         working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
               
       - name: CDK bootstrap
-        run: cdk synth
+        run: cdk bootstrap
         working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
 
       - name: CDK Deploy
