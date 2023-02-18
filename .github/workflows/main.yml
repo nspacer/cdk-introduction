@@ -31,7 +31,7 @@ jobs:
         run: 'sudo npm install -g aws-cdk'
 
       - name: Install Requirements 
-        run: 'pip3 install -r requirements.txt'
+        run: 'pip3 install -r requirements.txt && echo ${PWD}'
         working-directory: aws_cdk_app_demo
 
       - name: CDK Synth
