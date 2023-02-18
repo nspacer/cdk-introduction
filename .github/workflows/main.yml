@@ -34,20 +34,20 @@ jobs:
 
       - name: Install Requirements 
         run: 'pip3 install -r requirements.txt'
-        working-directory: $pwd
+        working-directory: .
 
       - name: CDK Synth
         run: cdk synth
-        working-directory: $pwd
+        working-directory: .
               
       - name: CDK bootstrap
         run: cdk bootstrap
-        working-directory: $pwd
+        working-directory: .
 
       - name: CDK Deploy
         run: cdk deploy --require-approval never
-        working-directory: $pwd
+        working-directory: .
         
       - name: CDK Destroy
         run: cdk destroy --force
-        working-directory: $pwd
+        working-directory: .
