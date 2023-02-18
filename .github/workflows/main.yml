@@ -2,8 +2,8 @@ name: Deploy AWS CDK
 
 # Controls when the action will run. 
 on:
-  #push:
-    #branches: [ main ]
+  push:
+    branches: [ main ]
   #pull_request:
     #branches: [ main ]
 
@@ -30,30 +30,24 @@ jobs:
         run: 'sudo apt update -y && sudo apt install nodejs npm -y'
 
       - name: Install AWS CDK
-        run: 'sudo npm install -g aws-cdk'
-      
-      - name: Present directory
-        run: 'pwd'   
-        
-      - name: Present directory
-        run: 'ls'   
+        run: 'sudo npm install -g aws-cdk' 
 
       - name: Install Requirements 
-        run: 'pip3 install -r requirements.txt && echo ${PWD}'
-        working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
+        run: 'pip3 install -r requirements.txt'
+        working-directory: $pwd
 
       - name: CDK Synth
         run: cdk synth
-        working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
+        working-directory: $pwd
               
       - name: CDK bootstrap
         run: cdk bootstrap
-        working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
+        working-directory: $pwd
 
       - name: CDK Deploy
         run: cdk deploy --require-approval never
-        working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
+        working-directory: $pwd
         
       - name: CDK Destroy
         run: cdk destroy --force
-        working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
+        working-directory: $pwd
