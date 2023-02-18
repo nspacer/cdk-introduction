@@ -55,5 +55,5 @@ jobs:
         working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
         
       - name: CDK Destroy
-        run: cdk destroy --require-approval never
+        run: cdk destroy --force
         working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
