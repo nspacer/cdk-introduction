@@ -35,12 +35,12 @@ jobs:
 
       - name: Install Requirements 
         run: 'pip3 install -r requirements.txt && echo ${PWD}'
-        working-directory: aws_cdk_app_demo
+        working-directory: ./cdk-introduction
 
       - name: CDK Synth
         run: cdk synth
-        working-directory: aws_cdk_app_demo
+        working-directory: ./cdk-introduction
 
       - name: CDK Deploy
         run: cdk deploy
-        working-directory: aws_cdk_app_demo
+        working-directory: ./cdk-introduction
