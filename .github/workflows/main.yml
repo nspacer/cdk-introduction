@@ -31,7 +31,7 @@ jobs:
         run: 'sudo npm install -g aws-cdk'
         
       - name: Present directory
-        run: 'pwd'   
+        run: 'pwd && ls'   
 
       - name: Install Requirements 
         run: 'pip3 install -r requirements.txt && echo ${PWD}'
