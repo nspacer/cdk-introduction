@@ -34,6 +34,7 @@ class AwsCdkAppDemoStack(Stack):
             handler="demo_lambda.lambda_handler"
         )
 
+        """
         vpc = ec2.Vpc.from_lookup(
             self,
             "vpc",
@@ -47,7 +48,7 @@ class AwsCdkAppDemoStack(Stack):
             machine_image=ec2.MachineImage().lookup(name="Amazon Linux 2 with letsencrypt fix"),
             vpc=vpc
         )
-
+        """
         bucket = s3.Bucket(self, "MyFirstBucket", versioned=True,
                            bucket_name="demo-bucket-name-beyond-the-cloud",
                            block_public_access=s3.BlockPublicAccess.BLOCK_ALL
