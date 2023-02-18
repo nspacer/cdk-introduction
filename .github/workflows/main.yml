@@ -45,6 +45,10 @@ jobs:
       - name: CDK Synth
         run: cdk synth
         working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
+              
+      - name: CDK bootstrap
+        run: cdk synth
+        working-directory: /home/runner/work/cdk-introduction/cdk-introduction/
 
       - name: CDK Deploy
         run: cdk deploy --require-approval never
